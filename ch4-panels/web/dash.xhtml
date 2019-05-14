@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Hello from Facelets
+        <h:form>
+
+           
+                <p:panel id="panel1" header="#{dashboardContoller.dashboard.dashbordTitle}">
+                    <p:panelGrid columns="3">
+                        <h:outputText value="#{dashboardContoller.dashboard.lastMonthSales}"/>
+                        <h:outputText value="#{dashboardContoller.dashboard.mostPurchaseCustomer}"/>
+                        <h:outputText value="#{dashboardContoller.dashboard.noOfCustomers}"/>
+                        <h:outputText value="#{dashboardContoller.dashboard.noOfProductInShop}"/>
+                        <h:outputText value="#{dashboardContoller.dashboard.todaySales}"/>
+                        <h:outputText value="#{dashboardContoller.dashboard.weeklyAvgSales}"/>
+                    </p:panelGrid>
+                </p:panel>
+           
+
+        </h:form>
+    </h:body>
+</html>
+

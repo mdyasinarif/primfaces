@@ -63,8 +63,19 @@
                             </p:selectCheckboxMenu>
 
                             <p:outputLabel for="popup" value="Popup:" />
-                            <p:calendar id="popup" value="#{calendarView.date2}" />
+                            <p:calendar id="popup" value="#{student.date2}" />
+
+                            <h:outputLabel for="basic" value="Basic Spinner: " />
+                            <p:spinner id="basic" value="#{student.number1}" />
+
+                            <p:inputText id="txt1" value="#{student.number1}" />
+                            <p:slider for="txt1" />
+
+                           
+                            <h:outputText value="Basic:" />
+                            <p:rating value="#{student.rating1}" />
                         </h:panelGrid>
+
                     </h:form>
                 </p:layoutUnit>
 

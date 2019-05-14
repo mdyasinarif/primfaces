@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Hello from Facelets
+        <h:form>
+                        <p:growl id="msgs" showDetail="true"/>
+                        <p:panel id="basic" header="MD Yasin Arif" footer="@yasinSohan" style="margin-bottom: 20px">
+                            <h:panelGrid columns="2" cellpadding="10">
+                                <h:outputText value="The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding. His beloved son Michael has just come home from the war, but does not intend to become part of his father's business. Through Michael's life the nature of the family business becomes clear. The business of the family is just like the head of the family, kind and benevolent to those who give respect, but given to ruthless violence whenever anything stands against the good of the family."/>
+                                <h:outputText value="The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding. His beloved son Michael has just come home from the war, but does not intend to become part of his father's business. Through Michael's life the nature of the family business becomes clear. The business of the family is just like the head of the family, kind and benevolent to those who give respect, "/>
+                                <h:outputText value="The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding. His beloved son Michael has just come home from the war, but does not intend to become part of his father's business. "/>
+                            </h:panelGrid>
+                        </p:panel>
+                        <p:panel id="toggleable" header="Toggleable" closable="true" toggleable="true" toggleSpeed="500" closeSpeed="500" widgetVar="panel" style="margin-bottom: 20px">
+                    
+                            <p:ajax event="close" listener="#{panelView.onClose}" update="msgs"/>
+                        <p:ajax event="toggle" listener="#{panelView.onToggle}" update="msgs"/>
+                        
+                        <h:panelGrid columns="2" cellpadding="10">
+                            <h:outputText value="The story begins as Don Vito Corleone, the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia" />
+                            <h:outputText value="The story begins as Don Vito Corleone, the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia" />
+                            <h:outputText value="The story begins as Don Vito Corleone, the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia" />
+                        </h:panelGrid>
+                        <f:facet name="option">
+                            <p:menu>
+                                <p:submenu label="Setting">
+                                    <p:menuitem value="Toogle" url="#" icon="pi pi-clone" onclick="PF('panel').loggle()"/>
+                                    <p:menuitem value="Remove" url="#" icon="pi pi-times" onclick="PF('panel').close()"/>
+                                </p:submenu>
+                            </p:menu>
+                        </f:facet>
+                        </p:panel>
+                        <p:panelGrid style="margin-top: 20x">
+                            <f:facet name="header">
+                                <p:row>
+                                    <p:column colspan="6">Time Chart</p:column>
+                                </p:row>
+                                <p:row>
+                                    <p:column>Monday</p:column>
+                                    <p:column>Tuesday</p:column>
+                                    <p:column>Wednesday</p:column>
+                                    <p:column>Thursday</p:column>
+                                    <p:column>Friday</p:column>
+                                </p:row>
+                                </f:facet>
+                                <p:row>
+                                    <p:column rowspan="6">Hours</p:column>
+                                
+                                    <p:column>Science</p:column>
+                                    <p:column>Math</p:column>
+                                    <p:column rowspan="2" style="text-align: center">Project</p:column>
+                                    <p:column>Math</p:column>
+                                    <p:column>Arts</p:column>
+                                </p:row>
+                            <p:row>
+                                <p:column>Science</p:column>
+                                <p:column>History</p:column>
+                                <p:column>Sports</p:column>
+                                <p:column>Math</p:column>
+                            </p:row>
+                                <p:row>
+                                    <p:column colspan="6">Lunch</p:column>
+                                
+                                </p:row>
+                            <p:row>
+                                <p:column>Math</p:column>
+                                <p:column>History</p:column>
+                                <p:column>English</p:column>
+                                <p:column>Science</p:column>
+                                <p:column>Arts</p:column>
+                            </p:row>
+                             <f:facet name="heder">
+                                <p:row>
+                                    <p:column colspan="6">Duration : 40 minutes</p:column>
+                                </p:row>
+                                
+                                </f:facet>
+                        </p:panelGrid>
+                        <p:accordionPanel>
+                            <p:tab title="Yasin">
+                                <h:panelGrid columns="2" cellpadding="10">
+                                    <h:outputText value="The story begins as Don Vito Corleone, the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia The story begins as Don Vito Corleone, the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia The story begins as Don Vito Corleone, the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia" />
+                                </h:panelGrid>
+                            </p:tab>
+                            <p:tab title="Arif">
+                                <h:panelGrid columns="2" cellpadding="10">
+                                    <h:outputText value="The story begins as Don Vito Corleone, the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia The story begins as Don Vito Corleone, the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia The story begins as Don Vito Corleone, the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia" />
+                                </h:panelGrid>
+                            </p:tab>
+                            <p:tab title="Sohan">
+                                <h:panelGrid columns="2" cellpadding="10">
+                                    <h:outputText value="The story begins as Don Vito Corleone, the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia the head of a New York MafiaThe story begins as Don Vito Corleone, the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia The story begins as Don Vito Corleone, the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia the head of a New York Mafia" />
+                                </h:panelGrid>
+                            </p:tab>
+                        </p:accordionPanel>
+                        <p:accordionPanel value="#{carContoller.cars}" var="car">
+                            <p:tab title="#{car.carName}">
+                                <h:panelGrid columns="2" cellpadding="10">
+                                    <h:outputText value="#{car.carName}"/>
+                                    <h:outputText value="#{car.carDetelis}"/>
+                                </h:panelGrid>
+                            </p:tab>
+                        </p:accordionPanel>
+                        
+                        <p:tabView value="#{carContoller.cars}" var="car">
+                            <p:tab title="#{car.carName}">
+                                <h:panelGrid columns="2" cellpadding="5">
+                                    <h:outputText value="#{car.carName}"/>
+                                    <h:outputText value="#{car.carDetelis}"/>
+                                </h:panelGrid>
+                            </p:tab>
+                        </p:tabView>
+                        
+                        <p:toolbar>
+                            <p:toolbarGroup align="left">
+                                <p:commandButton type="push" value="New" icon="ui-icon-document"/>
+                                <p:commandButton type="push" value="Open" icon="ui-icon-folder-open"/>
+                                <p:separator/>
+                                <p:commandButton type="push" title="Save" icon="ui-icon-disk"/>
+                                <p:commandButton type="push" title="Delete" icon="ui-icon-trash"/>
+                                <p:commandButton type="push" title="Print" icon="ui-icon-print"/>
+                                
+                            </p:toolbarGroup>
+                            <p:toolbarGroup align="right">
+                                <p:menuButton value="Navigete">
+                                    <p:menuitem value="Home" url="#"/>
+                                    <p:menuitem value="Logout" url="#"/>
+                                </p:menuButton>
+                            </p:toolbarGroup>
+                        </p:toolbar>
+                        
+                        
+                    </h:form>
+    </h:body>
+</html>
+
