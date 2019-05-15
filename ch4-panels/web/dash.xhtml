@@ -7,25 +7,81 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Facelet Title</title>
+        <style type="text/css">
+            .row{
+                width: 100%;
+                height: auto;
+            }
+            .col{
+                width: 32.31%;
+                height: 200px;
+                float: left;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+            }
+            .h1{
+               
+                color: #66ff66;
+                text-align: center;
+                padding: 5px 15px;
+            }
+            .h2{
+                font-size: 20px;
+                color: #66ffff;
+                text-align: center;
+                
+                 padding: 5px 15px;
+            }
+        </style>
     </h:head>
     <h:body>
-        Hello from Facelets
-        <h:form>
 
+        
+            <div class="row">
+                <div class="col">
+                    <h1 class="h1">Today's Sales</h1>
+                    <h2 class="h2"><h:outputText value="#{dashboardContoller.dashboard.mostPurchaseCustomer}"/></h2>
+                </div>
+                <div class="col">
+                    <h1 class="h1">Today's Sales</h1>
+                    <h2 class="h2"><h:outputText value="#{dashboardContoller.dashboard.noOfCustomers}"/></h2>
+                </div>
+                <div class="col">
+                    <h1 class="h1">Today's Sales</h1>
+                    <h2 class="h2"><h:outputText value="#{dashboardContoller.dashboard.noOfProductInShop}"/></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1 class="h1">Today's Sales</h1>
+                    <h2 class="h2"><h:outputText value="#{dashboardContoller.dashboard.mostPurchaseCustomer}"/></h2>
+                </div>
+                <div class="col">
+                    <h1 class="h1">Today's Sales</h1>
+                    <h2 class="h2"><h:outputText value="#{dashboardContoller.dashboard.noOfCustomers}"/></h2>
+                </div>
+                <div class="col">
+                    <h1 class="h1">Today's Sales</h1>
+                    <h2 class="h2"><h:outputText value="#{dashboardContoller.dashboard.noOfProductInShop}"/></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1 class="h1">Today's Sales</h1>
+                    <h2 class="h2"><h:outputText value="#{dashboardContoller.dashboard.mostPurchaseCustomer}"/></h2>
+                </div>
+                <div class="col">
+                    <h1 class="h1">Today's Sales</h1>
+                    <h2 class="h2"><h:outputText value="#{dashboardContoller.dashboard.noOfCustomers}"/></h2>
+                </div>
+                <div class="col">
+                    <h1 class="h1">Today's Sales</h1>
+                    <h2 class="h2"><h:outputText value="#{dashboardContoller.dashboard.noOfProductInShop}"/></h2>
+                </div>
+            </div>
            
-                <p:panel id="panel1" header="#{dashboardContoller.dashboard.dashbordTitle}">
-                    <p:panelGrid columns="3">
-                        <h:outputText value="#{dashboardContoller.dashboard.lastMonthSales}"/>
-                        <h:outputText value="#{dashboardContoller.dashboard.mostPurchaseCustomer}"/>
-                        <h:outputText value="#{dashboardContoller.dashboard.noOfCustomers}"/>
-                        <h:outputText value="#{dashboardContoller.dashboard.noOfProductInShop}"/>
-                        <h:outputText value="#{dashboardContoller.dashboard.todaySales}"/>
-                        <h:outputText value="#{dashboardContoller.dashboard.weeklyAvgSales}"/>
-                    </p:panelGrid>
-                </p:panel>
            
 
-        </h:form>
     </h:body>
 </html>
 
