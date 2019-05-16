@@ -16,6 +16,17 @@ import javax.faces.bean.ManagedBean;
 @ManagedBean
 public class BusContoller {
     private List<Bus> busList;
+    private Bus selectedBus;
+
+    public Bus getSelectedBus() {
+        return selectedBus;
+    }
+
+    public void setSelectedBus(Bus selectedBus) {
+        this.selectedBus = selectedBus;
+    }
+
+   
 
     public List<Bus> getBusList() {
         busList = new ArrayList<>();

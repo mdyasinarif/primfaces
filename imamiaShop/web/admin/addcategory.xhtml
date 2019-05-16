@@ -13,8 +13,10 @@
             <p:panelGrid columns="2">
                 <h:outputLabel value="Catagory Name"></h:outputLabel>
                 <p:inputText value="#{categoryMB.category.catName}"></p:inputText>
+                
                 <h:outputLabel value="Catagory Decription"></h:outputLabel>
                 <p:inputText value="#{categoryMB.category.catDesc}"></p:inputText>
+                
                 <p:commandButton action="#{categoryMB.addCategory()}" value="Save" update="msg"/>
             </p:panelGrid>
         </h:form>

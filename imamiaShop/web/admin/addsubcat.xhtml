@@ -11,14 +11,17 @@
     <h:body>
         <h:form>
             <p:messages id="msg" closable="true" showDetail="true"></p:messages>
+            
             <p:panelGrid columns="2">
                 <h:outputLabel value="Select Catagory Name"></h:outputLabel>
                 <p:selectOneMenu value="#{subCategoryMB.catname}">
                     <f:selectItem itemLabel="Select Catagory Name" itemValue=""/>
                     <f:selectItems value="#{subCategoryMB.categoryName}"/>
                 </p:selectOneMenu>
+                
                 <h:outputLabel value="Sub Catagory Name"></h:outputLabel>
                 <p:inputText value="#{subCategoryMB.subcat.subCatName}"></p:inputText>
+                
                 <h:outputLabel value="Sub Catagory Description"></h:outputLabel>
                 <p:inputText value="#{subCategoryMB.subcat.subCatDesc}"></p:inputText>
                 
