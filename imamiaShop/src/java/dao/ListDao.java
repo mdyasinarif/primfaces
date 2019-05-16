@@ -6,6 +6,7 @@
 package dao;
 
 import entity.Category;
+import entity.Product;
 import entity.SubCategory;
 import java.util.List;
 import org.hibernate.Session;
@@ -49,5 +50,13 @@ public class ListDao {
         cList.toString();
         session.close();
         return cList;
+    }
+    public List allProductList() {
+        SessionFactory factory = HibernateUtil.getSessionFactory();
+        Session session = factory.openSession();
+        List<Product> pList = session.createQuery("select al from Product al").list();
+        pList.toString();
+        session.close();
+        return pList;
     }
 }
