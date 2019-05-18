@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 18, 2019 5:01:17 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Investmentsummary" table="investmentsummary" catalog="sadriasocity" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="date" type="date">
+            <column name="date" length="10" />
+        </property>
+        <property name="accountNo" type="string">
+            <column name="accountNO" length="20" />
+        </property>
+        <property name="projectName" type="string">
+            <column name="projectName" length="50" />
+        </property>
+        <property name="projectLocation" type="string">
+            <column name="projectLocation" length="100" />
+        </property>
+        <property name="startDate" type="date">
+            <column name="startDate" length="10" />
+        </property>
+        <property name="directorName" type="string">
+            <column name="directorName" length="50" />
+        </property>
+        <property name="totalInvestment" type="java.lang.Double">
+            <column name="totalInvestment" precision="22" scale="0" />
+        </property>
+        <property name="totalReturn" type="java.lang.Double">
+            <column name="totalReturn" precision="22" scale="0" />
+        </property>
+        <property name="balance" type="java.lang.Double">
+            <column name="balance" precision="22" scale="0" />
+        </property>
+        <property name="projectDuration" type="java.lang.Integer">
+            <column name="projectDuration" />
+        </property>
+    </class>
+</hibernate-mapping>

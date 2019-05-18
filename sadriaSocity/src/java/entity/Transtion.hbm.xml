@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 18, 2019 5:01:17 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Transtion" table="transtion" catalog="sadriasocity" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="date" type="date">
+            <column name="Date" length="10" />
+        </property>
+        <property name="accountNo" type="string">
+            <column name="accountNo" length="20" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="20" />
+        </property>
+        <property name="slipNo" type="string">
+            <column name="slipNO" length="20" unique="true" />
+        </property>
+        <property name="deposit" type="java.lang.Integer">
+            <column name="Deposit" />
+        </property>
+        <property name="withdraw" type="java.lang.Integer">
+            <column name="Withdraw" />
+        </property>
+    </class>
+</hibernate-mapping>

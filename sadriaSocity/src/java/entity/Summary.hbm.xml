@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 18, 2019 5:01:17 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Summary" table="summary" catalog="sadriasocity" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="accountNo" type="string">
+            <column name="accountNo" length="20" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="20" />
+        </property>
+        <property name="savingType" type="string">
+            <column name="savingType" length="20" />
+        </property>
+        <property name="annunity" type="java.lang.Integer">
+            <column name="annunity" />
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="10" />
+        </property>
+        <property name="totalDeposit" type="java.lang.Integer">
+            <column name="totalDeposit" />
+        </property>
+        <property name="totalWithdraw" type="java.lang.Integer">
+            <column name="totalWithdraw" />
+        </property>
+        <property name="balance" type="java.lang.Integer">
+            <column name="balance" />
+        </property>
+        <property name="installmentNo" type="java.lang.Integer">
+            <column name="installmentNo" />
+        </property>
+        <property name="coverDate" type="date">
+            <column name="coverDate" length="10" />
+        </property>
+        <property name="due" type="java.lang.Integer">
+            <column name="due" />
+        </property>
+    </class>
+</hibernate-mapping>

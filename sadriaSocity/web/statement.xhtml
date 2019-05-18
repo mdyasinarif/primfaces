@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>Payment</title>
+            </f:facet>
+        </h:head>
+
+        <h:body>
+
+            <p:layout fullPage="true">
+
+                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+                    <h1 style="text-align: center">Sadria Socity</h1> 
+                </p:layoutUnit>
+
+                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                    <h4 style="text-align: center">www.sadriasocity@gmail.com</h4>  
+                </p:layoutUnit>
+
+                <p:layoutUnit position="west" size="175" header="Sadria Socity" collapsible="true">
+                    <p:menu>
+
+                        <p:menuitem value="Home" url="index.xhtml" />
+                        <p:menuitem value="Create Saving Account" url="saving.xhtml" />
+                        <p:menuitem value="Create Investment Account" url="investment.xhtml" />
+                        <p:menuitem value="Transtion" url="transtion.xhtml" />
+                        <p:menuitem value="Statement" url="statement.xhtml" />
+
+
+
+
+                    </p:menu>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="center">
+
+                    <h:form>
+                        <p:messages id="msg" closable="true" showDetail="true"></p:messages>
+                        <p:panelGrid columns="2">
+                            <h:outputLabel value="Name"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.name}"></p:inputText>
+                            <h:outputLabel value="Date Of Birth"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.dateofBirth}"></p:inputText>
+                            <h:outputLabel value="Father / Husbend Name"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.fatherHusbendName}"></p:inputText>
+                            <h:outputLabel value="Mother Name"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.motherName}"></p:inputText>
+                            <h:outputLabel value="Present Address"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.presentAddress}"></p:inputText>
+                            <h:outputLabel value="Parmanet Address"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.parmanetAddress}"></p:inputText>
+                            <h:outputLabel value="Gender"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.gender}"></p:inputText>
+                            <h:outputLabel value="Religion"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.religion}"></p:inputText>
+                            <h:outputLabel value="NID NO"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.nidno}"></p:inputText>
+                            <h:outputLabel value="Mobile No"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.mobileNo}"></p:inputText>
+                            <h:outputLabel value="Account No"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.accountNo}"></p:inputText>
+                            <h:outputLabel value="Card No"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.cardNo}"></p:inputText>
+                            <h:outputLabel value="From No"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.fromNo}"></p:inputText>
+                            <h:outputLabel value="Annunity"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.annunity}"></p:inputText>
+                            <h:outputLabel value="Saving Type"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.savingType}"></p:inputText>
+                            <h:outputLabel value="Nomine Name"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.nomineName}"></p:inputText>
+                            <h:outputLabel value="Relations"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.relations}"></p:inputText>
+                            <h:outputLabel value="Share"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.share}"></p:inputText>
+                            <h:outputLabel value="Share"></h:outputLabel>
+                            <p:inputText value="#{personMB.person.share}"></p:inputText>
+                        </p:panelGrid>
+                    </h:form>
+
+                </p:layoutUnit>
+
+            </p:layout>
+
+        </h:body>
+
+    </f:view>
+</html>
+
