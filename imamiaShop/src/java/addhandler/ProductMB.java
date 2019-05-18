@@ -34,7 +34,7 @@ public class ProductMB {
 
     Product product = new Product();
     SubCategory subcat = new SubCategory();
-    String suncatname;
+    String subcatname;
     String catname = "";
     List<SubCategory> listSubCat;
     UploadedFile file;
@@ -71,12 +71,12 @@ public class ProductMB {
         this.subcat = subcat;
     }
 
-    public String getSuncatname() {
-        return suncatname;
+    public String getSubcatname() {
+        return subcatname;
     }
 
-    public void setSuncatname(String suncatname) {
-        this.suncatname = suncatname;
+    public void setSubcatname(String subcatname) {
+        this.subcatname = subcatname;
     }
 
     public List<SubCategory> getListSubCat() {
@@ -89,7 +89,7 @@ public class ProductMB {
 
     public String addProduct() {
         upload();
-        listSubCat = new ListDao().subcatListByName(suncatname);
+        listSubCat = new ListDao().subcatListByName(subcatname);
         //subcat.setSubCatId(listCat.get(0).getCatId());
         subcat.setSubCatId(listSubCat.get(0).getSubCatId());
         product.setSubCategory(subcat);

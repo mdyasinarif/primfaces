@@ -1,12 +1,74 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:head>
-        <title>Facelet Title</title>
-    </h:head>
-    <h:body>
-        Hello from Facelets
-    </h:body>
-</html>
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
 
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>PrimeFaces</title>
+            </f:facet>
+        </h:head>
+
+        <h:body>
+
+            <p:layout fullPage="true">
+
+                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+                    <h1 style="text-align: center">Imamima Publication</h1>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                    <h4 style="text-align: center">www.imamiapub@gmail.com</h4> 
+                </p:layoutUnit>
+
+                <p:layoutUnit position="west" size="175" header="Shoping" collapsible="true">
+                    <p:menu>
+                        <p:menuitem value="Home" url="index.xhtml" />
+                        <p:menuitem value="Add Category" url="addcategory.xhtml" />
+                        <p:menuitem value="Add Sub Category" url="addsubcat.xhtml" />
+                        <p:menuitem value="Add Product" url="addproduct.xhtml" />
+                    </p:menu>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="center">
+
+                    <h:form id="form">
+                        <p:panel header="Cart " >
+                            <p:panelGrid columns="2" style="border: 0" >
+                                <h:outputText value="#{shoppingCart.cartsize} #{shoppingCart.item}" id="cart"/>
+                                <p:commandButton value="View Car" action="viewchart.xhtml"/>
+                            </p:panelGrid>
+                        </p:panel>
+                        <p:dataGrid var="p" value="#{displayProductMB.allProduct}" columns="3" rows="10" paginator="true" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}" rowsPerPageTemplate="6,12,16">
+                            <f:facet name="header">
+                                <h:outputLabel value="All Products"/>
+                            </f:facet>
+                            <p:panel header="Name : #{p.proName}">
+
+                                <h:panelGrid columns="1">
+                                    <h:graphicImage name="#{p.proUrl}" library="images" width="100" height="150"/>
+                                    <h:outputLabel value="Price : #{p.proPrice}"/>
+
+                                    <p:commandButton action="#{shoppingCart.addtoCart(p)}" value="ADD to Cart" ajax="false" />
+                                </h:panelGrid>
+
+
+                            </p:panel>
+                        </p:dataGrid>
+
+
+                    </h:form>
+
+                </p:layoutUnit>
+
+            </p:layout>
+
+        </h:body>
+
+    </f:view>
+</html>
