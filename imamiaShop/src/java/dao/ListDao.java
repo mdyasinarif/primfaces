@@ -27,30 +27,34 @@ public class ListDao {
         session.close();
         return cList;
     }
+
     public List subcatList(String name) {
         SessionFactory factory = HibernateUtil.getSessionFactory();
         Session session = factory.openSession();
-        List<SubCategory> cList = session.createQuery("select al.subCatName from SubCategory al where al.category.catId in(select a.catId from Category a where lower(a.catName)='"+name.toLowerCase()+"')").list();
+        List<SubCategory> cList = session.createQuery("select al.subCatName from SubCategory al where al.category.catId in(select a.catId from Category a where lower(a.catName)='" + name.toLowerCase() + "')").list();
         cList.toString();
         session.close();
         return cList;
     }
+
     public List<Category> catListByName(String name) {
         SessionFactory factory = HibernateUtil.getSessionFactory();
         Session session = factory.openSession();
-        List<Category> cList = session.createQuery("select al from Category al where lower(catName)='"+name.toLowerCase()+"'").list();
+        List<Category> cList = session.createQuery("select al from Category al where lower(catName)='" + name.toLowerCase() + "'").list();
         cList.toString();
         session.close();
         return cList;
     }
+
     public List<SubCategory> subcatListByName(String name) {
         SessionFactory factory = HibernateUtil.getSessionFactory();
         Session session = factory.openSession();
-        List<SubCategory> cList = session.createQuery("select al from SubCategory al where lower(subCatName)='"+name.toLowerCase()+"'").list();
+        List<SubCategory> cList = session.createQuery("select al from SubCategory al where lower(subCatName)='" + name.toLowerCase() + "'").list();
         cList.toString();
         session.close();
         return cList;
     }
+
     public List allProductList() {
         SessionFactory factory = HibernateUtil.getSessionFactory();
         Session session = factory.openSession();
