@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>File Upload </title>
+
+    </h:head>
+    <h:body>
+        <script type="text/javascript">
+            //<![CDATA[
+            function start() {
+                PF('statusDialog').show();
+            }
+
+            function stop() {
+                PF('statusDialog').hide();
+            }
+            //]]>
+        </script>
+
+        <p:dialog modal="true" widgetVar="statusDialog" header="Status" draggable="false" closable="false" resizable="false">
+            <p:graphicImage name="/images/ChistiUdan.png" />
+        </p:dialog>
+        <h:form enctype="multipart/form-data">
+            <h:inputFile value="#{demoBean.file1}"/><br/>
+            <h:inputFile value="#{demoBean.file2}"/><br/>
+            <h:commandButton value="Upload" action="#{demoBean.upload()}"/>
+            <p:commandButton value="Download" ajax="false" onclick="PrimeFaces.monitorDownload(start, stop);" icon="pi pi-arrow-down">
+                <p:fileDownload value="#{fileDownloadView.file}" />
+            </p:commandButton>
+        </h:form>
+        <hr/>
+        <p:graphicImage url="/resources/images/#{student.filePath}" height="120" width="100"/>
+        <hr/>
+        <p:dataTable var="student" value="#{demoBean.students}">
+            <p:column headerText="Name of Student">
+                <h:outputText value="#{student.name}"/>
+            </p:column>
+            <p:column headerText="Photo">
+                <p:graphicImage url="/resources/images/#{student.filePath}" height="120" width="100"/>
+
+            </p:column>
+            <p:column headerText="Action">
+                <p:commandButton value="Download" ajax="false" onclick="PrimeFaces.monitorDownload(start, stop);" icon="pi pi-arrow-down">
+                    <p:fileDownload value="#{fileDownloadView.file}" />
+                </p:commandButton>
+
+            </p:column>
+
+        </p:dataTable>
+        <p:galleria value="#{imagesView.images}" var="image" panelWidth="240" panelHeight="200" showCaption="true">
+            <p:graphicImage name="images/#{image}" alt="Image Description for #{image}" title="#{image}"/>
+        </p:galleria>
+    </h:body>
+</html>
+
