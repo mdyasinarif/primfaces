@@ -116,7 +116,7 @@ public class ProductMB {
                 String biuldcut = webcut.substring(0, webcut.lastIndexOf("\\"));
                 String mainURLPath = biuldcut.substring(0, biuldcut.lastIndexOf("\\"));
                 InputStream inputStream = file.getInputstream();
-                String path = mainURLPath+"\\imamiaShop\\web\\resources\\images\\"+file.getFileName();
+                String path = mainURLPath+"\\web\\resources\\images\\"+file.getFileName();
                 File desFile = new File(path);
                 if (!desFile.exists()) {
                     FileUtils.copyInputStreamToFile(inputStream, desFile);

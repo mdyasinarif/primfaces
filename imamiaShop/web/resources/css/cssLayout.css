@@ -1,4 +1,6 @@
-
+.ui-messages-warn-detail{
+    display: none!important;
+}
 #top {
     position: relative;
     background-color: #036fab;
